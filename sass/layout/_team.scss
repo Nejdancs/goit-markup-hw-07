@@ -1,0 +1,19 @@
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+.team__title {
+  margin-bottom: 50px;
+}
+
+.team__card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.team__card {
+  margin-top: 30px;
+  margin-left: 30px;
+}

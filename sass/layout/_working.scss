@@ -1,0 +1,37 @@
+.working {
+  padding-top: 0;
+}
+
+.working__title {
+  margin-bottom: 50px;
+}
+
+.working__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.working__item {
+  position: relative;
+
+  width: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.working__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  padding: 27px 60px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+  @include font(16px, 14px, 700);
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,35 @@
+// Utils
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
+// Base
+@import './base/common';
+@import './base/container';
+
+// Components
+@import './components/section-title';
+@import './components/logo';
+@import './components/menu';
+@import './components/contacts';
+@import './components/main-button';
+@import './components/card-team';
+@import './components/filter-btn';
+@import './components/gallery-card';
+@import './components/social';
+@import './components/address';
+@import './components/distribution-form';
+@import './components/developer';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/form';
+
+// Layout
+@import './layout/header';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/working';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/portfolio';
+@import './layout/footer';

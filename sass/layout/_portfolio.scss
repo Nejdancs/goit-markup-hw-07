@@ -1,0 +1,46 @@
+/* Portfolio
+================================== */
+
+.portfolio {
+  margin-top: 80px;
+}
+
+/* Filter
+================================== */
+.portfolio__filter {
+  @include centrFlex(flex, center, center);
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.is-active {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Gallery
+================================== */
+
+.portfolio__card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.portfolio__card {
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+
+  background-color: #ffffff;
+}
+
+.card-hidden {
+  @extend .visually-hidden;
+  visibility: hidden;
+}

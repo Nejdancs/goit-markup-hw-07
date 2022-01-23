@@ -1,0 +1,32 @@
+.contacts {
+  @include centrFlex(flex, center, flex-start);
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 31px;
+
+  @include font(16px, 14px, 500, 0.02em);
+
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contacts__link {
+  @include centrFlex(flex, center, flex-start);
+  color: var(--primary-text-color);
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

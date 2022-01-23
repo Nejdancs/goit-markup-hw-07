@@ -1,0 +1,25 @@
+.main-button {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-family: inherit;
+  @include font(30px, 16px, 700, 0.06em);
+
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

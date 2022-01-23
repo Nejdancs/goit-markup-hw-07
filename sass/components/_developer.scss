@@ -1,0 +1,17 @@
+.developer {
+  display: inline-block;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  @include font(20px, 12px);
+}
+
+.developer__text {
+  padding: 0 2px;
+  background-color: #000000;
+  color: #ffffff;
+
+  &:last-child {
+    background-color: #ff6b08;
+  }
+}

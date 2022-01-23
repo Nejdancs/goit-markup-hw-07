@@ -1,0 +1,196 @@
+.form {
+  text-align: center;
+}
+
+.form__head {
+  display: block;
+  margin-bottom: 30px;
+
+  color: #212121;
+  @include font(23px, 20px, 700);
+  text-align: center;
+}
+
+.form__field {
+  position: relative;
+  display: block;
+
+  margin-bottom: 28px;
+}
+
+.form__field-textarea {
+  position: relative;
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+/* Метка поля ввода  */
+
+.form__label {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include font(14px, 12px, 400, 0.01em);
+  cursor: text;
+
+  transition: transform 250ms var(--cubic);
+
+  .form__input:not(:placeholder-shown) + &,
+  .form__field:focus-within & {
+    transform: translate(-42px, -38px);
+    cursor: default;
+  }
+}
+
+/* Метка поля комента */
+
+.form__label-textarea {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transform: translateY(0);
+
+  @include font(14px, 12px, 400, 0.01em);
+  cursor: text;
+
+  transition: transform 250ms var(--cubic);
+
+  .form__textarea:not(:placeholder-shown) + &,
+  .form__field-textarea:focus-within & {
+    transform: translate(-16px, -30px);
+    cursor: default;
+  }
+}
+
+/* Поле ввода */
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include font(14px, 12px, 400, 0.01em);
+
+  outline: none;
+  transition: border-color 250ms var(--cubic);
+
+  .form__field:focus-within & {
+    border-color: var(--accent-color);
+  }
+}
+
+/* Поле коментария */
+
+.form__textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include font(14px, 12px, 400, 0.01em);
+
+  outline: none;
+  resize: none;
+  transition: border-color 250ms var(--cubic);
+
+  .form__field-textarea:focus-within & {
+    border-color: var(--accent-color);
+  }
+}
+
+/* Иконка */
+
+.form__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: fill 250ms var(--cubic);
+
+  .form__field:focus-within & {
+    fill: var(--accent-color);
+  }
+}
+
+/* Проверка валидации */
+
+.form__input:not(:placeholder-shown):valid ~ .form_validation-icon,
+.form__input:not(:placeholder-shown):invalid ~ .form_validation-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.form__input:not(:placeholder-shown):valid ~ .form_validation-icon {
+  background-image: url(../images/valid.svg);
+}
+.form__input:not(:placeholder-shown):invalid ~ .form_validation-icon {
+  background-image: url(../images/invalid.svg);
+}
+
+/* Чекбокс соглашения */
+
+.form__field-checkbox {
+  @include centrFlex(flex, center, center);
+  margin-bottom: 30px;
+}
+
+.form__checkbox-icon {
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  fill: none;
+
+  transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
+
+  .form__checkbox:focus + & {
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #000000;
+  }
+
+  .form__checkbox:checked + & {
+    border-color: transparent;
+    background-color: var(--accent-color);
+    fill: #ffffff;
+  }
+}
+
+.form__checkbox-label {
+  @include font(24px, 14px);
+}
+
+/* Ссылка на условия договора */
+
+.form__checkbox-link {
+  position: relative;
+  display: inline-flex;
+  color: var(--accent-color);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+
+    width: 100%;
+    border-bottom: 1px solid var(--accent-color);
+  }
+}

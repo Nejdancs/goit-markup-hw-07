@@ -1,0 +1,23 @@
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  @include font(21px);
+  font-style: normal;
+
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address__link--color--white {
+  color: #ffffff;
+}
+
+.address__link--color--grey {
+  color: rgba(255, 255, 255, 0.6);
+}

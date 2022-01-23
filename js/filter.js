@@ -1,5 +1,5 @@
 function app() {
-  const buttons = document.querySelectorAll('.filter__btn')
+  const buttons = document.querySelectorAll('.filter-btn')
   const cards = document.querySelectorAll('.portfolio__card')
 
   function filter(category, items) {

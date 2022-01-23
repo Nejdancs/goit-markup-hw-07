@@ -1,0 +1,52 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 10px;
+  background-color: #2f303a;
+}
+
+.page-footer__container {
+  @include centrFlex(flex, baseline, space-between);
+}
+
+/* Блок адреса и лого */
+
+.page-footer__address {
+  max-width: 231px;
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Блок соцсетей */
+
+.page-footer__social-label {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  @include font($fw: 700);
+  text-transform: uppercase;
+}
+
+/* Блок подписки на рассылку */
+
+.page-footer__distribution-title {
+  display: block;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  @include font($fw: 700);
+  text-transform: uppercase;
+}
+
+/* Информация о разработчике */
+
+.page-footer__developer-wrap {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  text-align: center;
+}

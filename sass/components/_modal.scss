@@ -1,0 +1,98 @@
+.modal {
+  @include centrAbsolut();
+
+  width: 528px;
+  padding: 40px;
+  min-height: 581px;
+  border-radius: 4px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: transform 400ms var(--cubic);
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -100%) rotateX(-45deg);
+}
+
+/* Кнопка закрытия модалки */
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.btn-close {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: #ffffff;
+  color: #000000;
+
+  cursor: pointer;
+  outline: none;
+
+  transition: color 250ms var(--cubic), border-color 250ms var(--cubic),
+    border-radius 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 50% 50% 0;
+    border-left: none;
+  }
+}
+
+.btn-close__text {
+  position: absolute;
+  right: 100%;
+  top: -1px;
+  bottom: -1px;
+  transform: translateX(15px);
+
+  display: inline-flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+
+  color: #000000;
+  background-color: #ffffff;
+  @include font(30px, 13px, 400, 0.04em);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 250ms var(--cubic), transform 250ms var(--cubic),
+    opacity 250ms var(--cubic), border-color 250ms var(--cubic), color 250ms var(--cubic);
+
+  .btn-close:hover &,
+  .btn-close:focus & {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    border-color: rgba(0, 0, 0, 0.3);
+    color: var(--accent-color);
+  }
+}
+
+.btn-close__icon {
+  margin: auto;
+  fill: currentColor;
+  transition: transform 250ms var(--cubic);
+
+  .btn-close:hover &,
+  .btn-close:focus & {
+    transform: rotate(-270deg);
+  }
+}

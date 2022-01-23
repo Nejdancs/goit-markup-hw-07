@@ -1,0 +1,31 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+
+  background-color: var(--primary-bg-color);
+}
+
+.page-header__container {
+  @include centrFlex(flex, center, flex-start);
+}
+
+.main-nav {
+  @include centrFlex(flex, center, flex-start);
+}
+
+.page-header__logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.page-header__menu {
+  margin-left: 93px;
+}
+
+.page-header__contacts {
+  margin-left: auto;
+}

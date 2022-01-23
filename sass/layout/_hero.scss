@@ -1,0 +1,29 @@
+.container-fluid {
+  margin-top: 80px;
+  background-color: #2f303a;
+}
+
+.hero {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero__title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  color: #ffffff;
+  @include font(60px, 44px, 900, 0.06em);
+  text-transform: uppercase;
+}
