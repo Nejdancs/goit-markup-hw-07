@@ -456,13 +456,34 @@ img {
 }
 
 .developer__text {
-  padding: 0 2px;
+  position: relative;
+  display: inline-block;
+  width: 16px;
   background-color: #000000;
   color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.developer__text:first-child::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 3.5px solid #000000;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
 }
 
 .developer__text:last-child {
+  margin-left: 4px;
   background-color: #ff6b08;
+  text-align: center;
 }
 
 .backdrop {
